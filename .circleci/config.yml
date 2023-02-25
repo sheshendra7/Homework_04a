@@ -16,6 +16,6 @@ jobs:
           path: test-results
 
 workflows:
-  testing-gitapi:
+  test-main:
     jobs:
       - build-and-test       
