@@ -33,6 +33,8 @@ def Tester_mind(user_id):
         print(f"Repo: {name} Number of commits: {count}")
         results.append((name, count))
 
+   # print(results)
+    return results
 
 
 
