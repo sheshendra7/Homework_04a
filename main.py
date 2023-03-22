@@ -14,13 +14,13 @@ def Tester_mind(user_id):
     url = f"https://api.github.com/users/{user_id}/repos"
     response = requests.get(url)
     if response.status_code != 200:
-        print("Failed to retrieve data!")
+        #print("Failed to retrieve data!")
         return "Failed to retrieve data!"
         sys.exit()
     repos = json.loads(response.text)
 
     if len(repos) <= 0:
-        print("No repositories created")
+        #print("No repositories created")
         return "No repositories created"
         sys.exit()
     results = []
@@ -30,7 +30,7 @@ def Tester_mind(user_id):
         response = requests.get(url)
         commits = json.loads(response.text)
         count = len(commits)
-        print(f"Repo: {name} Number of commits: {count}")
+        #print(f"Repo: {name} Number of commits: {count}")
         results.append((name, count))
 
    # print(results)
